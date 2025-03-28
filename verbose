@@ -1,0 +1,6 @@
+#!/bin/bash
+read -p "Enter command: " cmd
+echo "Command: $cmd" >> ~/command_log.txt
+echo -e "\nOutput:" >> ~/command_log.txt
+$cmd >> ~/command_log.txt 2>&1
+cat ~/command_log.txt
